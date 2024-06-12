@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppControleFinanceiro.Views.TransactionEdit"
+             Title="TransactionEdit">
+
+    <VerticalStackLayout Spacing="10">
+        <Border 
+            BackgroundColor="Black" 
+            Margin="15" 
+            Padding="15" 
+            Stroke="Transparent"
+            StrokeShape="RoundRectangle 30">
+            <Grid RowDefinitions="Auto" ColumnDefinitions="*, 10">
+                <Label 
+                    Text="Novo"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+                <Image
+                    Source="close.png"
+                    WidthRequest="17"
+                    Grid.Row="0"
+                    Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizerTapped_To_Close"/>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </Border>
+
+        <Grid ColumnDefinitions="*,*" Margin="30, 10">
+            <RadioButton
+                x:Name="edReceita"
+                IsChecked="True"
+                Content="Receita"/>
+            <RadioButton
+                x:Name="edDespesa"
+                Grid.Column="1"                 
+                Content="Despesa"/>
+        </Grid>
+
+        <Entry x:Name="edName" 
+               Placeholder="Nome" 
+               Margin="15, 0"/>
+
+        <DatePicker x:Name="edDate" 
+                    Margin="15, 0"/>
+
+        <Entry x:Name="edValue" 
+               Placeholder="Valor" 
+               Margin="15, 0"/>
+
+        <Button Text="Salvar" 
+                Margin="15, 0" 
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked_Save"/>
+    </VerticalStackLayout>
+</ContentPage>
