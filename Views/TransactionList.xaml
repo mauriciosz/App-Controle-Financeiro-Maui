@@ -76,7 +76,7 @@
                         FontSize="36"/>
 
                     <Button Text="+" 
-                        FontSize="48"
+                        FontSize="36"
                         Clicked="OnButtonClicked_To_TransactionAdd"
                         HorizontalOptions="Center"
                         Grid.Column="1"

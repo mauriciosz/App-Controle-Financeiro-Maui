@@ -13,7 +13,7 @@
             StrokeShape="RoundRectangle 30">
             <Grid RowDefinitions="Auto" ColumnDefinitions="*, 10">
                 <Label 
-                    Text="Novo"
+                    Text="Editar"
                     TextColor="White"
                     FontAttributes="Bold"
                     VerticalOptions="Center" 
